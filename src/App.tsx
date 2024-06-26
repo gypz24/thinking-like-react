@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css'
+import { MessageSummaryListContainer } from './components/MessageSummaryListContainer';
 
 const App = () => {
-  return <h1>Thinking Like React</h1>
+  return <MessageSummaryListContainer />
 }
 
 export default App;
