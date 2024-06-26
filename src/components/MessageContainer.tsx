@@ -2,13 +2,17 @@ import React from 'react';
 import getShortMessage from '../utils/getShortMessage';
  
 interface MessageContainerProps{
-  message: string
+  message: string,
+  fontWeight: 'normal' | 'bold'
 }
  
 export function MessageContainer({
-  message
+  message,
+  fontWeight
 }: MessageContainerProps){
     return (
-      <p>{getShortMessage(message)}</p>
+      <p style={{
+        fontWeight
+      }}>{getShortMessage(message)}</p>
     );
 }

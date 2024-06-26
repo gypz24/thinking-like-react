@@ -2,15 +2,18 @@ import React from 'react';
 import getFormattedDateDifference from '../utils/getFormattedDateDifference';
  
 interface TimeElapsedContainerProps{
-  createdAt: Date
+  createdAt: Date,
+  fontWeight: 'normal' | 'bold'
 }
  
 export function TimeElapsedContainer({
-  createdAt
+  createdAt,
+  fontWeight
 }: TimeElapsedContainerProps){
   return (
     <p style={{
-      color: "grey"
+      color: "grey",
+      fontWeight
     }}>
       {getFormattedDateDifference(createdAt)}
     </p>

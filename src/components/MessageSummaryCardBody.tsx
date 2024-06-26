@@ -6,12 +6,14 @@ interface MessageSummaryCardBodyProps{
   senderName: string
   message: string
   createdAt: Date
+  seen: boolean
 }
  
 export function MessageSummaryCardBody({
   senderName,
   message,
-  createdAt
+  createdAt,
+  seen
 }: MessageSummaryCardBodyProps){
   return (
     <div style={{
@@ -21,7 +23,7 @@ export function MessageSummaryCardBody({
        
     }}>
       <MessageSummaryCardTitle senderName={senderName} />
-      <MessageSummaryCardDescription message={message} createdAt={createdAt} />
+      <MessageSummaryCardDescription message={message} createdAt={createdAt} seen={seen} />
     </div>
   )
 }

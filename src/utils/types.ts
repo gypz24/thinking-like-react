@@ -9,3 +9,12 @@ export interface SenderWithMessage {
       createdAt: Date
   }>
 }
+ 
+export interface MarkMessageAsSeenRequest {
+  senderId: string,
+  messageId: string
+}
+ 
+export interface MarkMessageAsSeenResponse {
+  updated: boolean
+}
